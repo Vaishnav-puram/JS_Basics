@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="b">Click here 1</button>
+    <button class="b">Click here 2</button>
+    <div class="c" style="background-color: red; display: none; height: 100px; width: 100px;"></div>
+    <div class="c" style="background-color:blue;display: none; height: 100px; width: 100px;"></div>
+    <script>
+        let btn = document.querySelectorAll(".b");
+        let col = document.querySelectorAll(".c");
+        btn[0].addEventListener("click", change); //one way to write a function
+        function change(){
+            col[0].style.display = "flex";
+        }
+        btn[1].addEventListener("click", function () {//second way to write a function
+            col[1].style.display = "flex";
+        });
+    </script>
+</body>
+
+</html>
