@@ -18,4 +18,4 @@ function currying(fn){
     }
 }
 var result=currying(multiply)
-console.log(result(4)(3))
+console.log(result(4)(3)) //12

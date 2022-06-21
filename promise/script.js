@@ -24,7 +24,7 @@ res.then((ans)=>{
 
 async function promiseHandler(){
     try{
-        let ans=await sample(2,4);
+        let ans=await sample(0,4);
         console.log("the value is larger"+" "+ans);
 
     }

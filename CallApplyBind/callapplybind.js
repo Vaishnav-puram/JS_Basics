@@ -26,13 +26,38 @@ console.log(show.call(obj3,"hello"))
 console.log(show.apply(obj,["hello"]))
 console.log(show.apply(obj1,["hello"]))
 
-
 //bind
+let a={
+    name:"vaishnav",
+    age:23
+}
+function details(){
+    console.log(`Name is ${this.name} age is ${this.age}`)
+}
+
+let res=details.bind(a) //converts res variable as function
+res(); //Name is vaishnav age is 23 creates
+
+function details1(lives){
+    console.log(`Name is ${this.name} age is ${this.age} lives in ${lives}`)
+}
+let res1=details1.bind(a,'nizamabad');
+res1(); //Name is vaishnav age is 23 lives in nizamabad
+
+//--------------------------------------------------------------------------------------------
+
+//call , apply , bind
 let obj4={
     details:function student(rollno,id){
         return this.name+","+rollno+","+id;
     }
 }
 var student1={name:"vaishnav"}
-var result=obj4.details.bind(student1,14,2421)
-console.log(result())
+var result=obj4.details.bind(student1,14,2421) //bind method takes object as first argument and creates a new function here it is result()
+console.log(result()) //vaishnav,14,2421
+var result=obj4.details.call(student1,14,2421)
+console.log(result) //vaishnav,14,2421
+var result=obj4.details.apply(student1,[14,2421]) //takes argumemts in array in apply method
+console.log(result) //vaishnav,14,2421
+
+//--------------------------------------------------------------------------
