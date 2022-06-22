@@ -1,5 +1,6 @@
 //it is an improved way to handle fun parameters
 //allows us to represent an indefinite no.of arguments as an array
+//Any number of arguments will be converted into an array using the rest parameter.
 
 //in es5
 function sum(a,b,c,d,e,f,g,h,i){
@@ -19,7 +20,7 @@ function sum1(...anyName){
 }
 sum1(1,2,3,4,5,6,7,8,9)
 
-function names(a,b,...c){
+function names(a,b,...c){  // Note: Rest parameter should always be used at the last parameter of a function
     console.log(`${a} ${b}`) //vaishnav vishal
     console.log(c) //[ 'ajay', 'vijay', 'avnish', 'arun', 'rahul' ]
     console.log(c[0]) //ajay

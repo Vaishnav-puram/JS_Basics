@@ -1,3 +1,5 @@
+//the spread operator is used to spreading an array, and object literals
+
 //In es5
 function sum(a,b,c){
     console.log(a+b+c)
