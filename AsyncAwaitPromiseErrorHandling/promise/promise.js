@@ -1,4 +1,4 @@
-function sumOfThree(...ele){
+function sumOfThree(...ele){ //restParameter
     return new Promise((resolve,reject)=>{
         if(ele.length>3){
             reject("only three elements or less needed!!")

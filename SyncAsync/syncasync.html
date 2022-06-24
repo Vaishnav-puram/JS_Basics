@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <button id="press">Click to start</button>
+        <input type="text" placeholder="enter your name" autocomplete="off"></input>
+        <input type="password" placeholder="enter your password" autocomplete="off"></input>
+        <button type='submit' id="submit">Submit</button>
+    </form>
+    <script>
+
+        const a = document.getElementById("press");
+        
+        // const wait = () => {
+        //     console.log("JS Started....");
+        //     let start = new Date().getTime();
+        //     console.log(new Date().getTime() - start)
+        //     while (new Date().getTime() - start < 5000) {
+        //         console.log("JS Ends....")
+        //     }
+        // }
+        const wait=() => {
+            console.log("JS Started...");
+            console.log("this is async!!!!!")
+            setTimeout( () => {
+                console.log("JS Part Ends....");
+            }, 5000);
+        }
+        a.addEventListener('click', wait);
+    </script>
+</body>
+
+</html>
